@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { staggerContainer } from "../../utils/motion";
 
+
+// SectionWrapper es un envoltorio de secciones
+// Es una constante que tiene una funcion adentro como cualquier componente de React, pero en este caso la funcion flecha devuelve una un function llamada HOC().
+// Cuando llamamos a sectionWrapper cada vez que vamos a un componente, no devuelve todo de una sino que ejecuta la funcion HOC, la cual renderiza al componente dentro de un motion.section que tiene ciertas animaciones.
+
 const SectionWrapper = (Component, idName) =>
   function HOC() {
     return (
